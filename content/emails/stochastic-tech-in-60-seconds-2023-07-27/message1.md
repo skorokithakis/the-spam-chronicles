@@ -7,20 +7,19 @@ from = "Spammer"
 
 Hi Stavros,
 
-Jai here from Advids <https://www.google.com/search?q=Advids>.
+Jai here from Advids .
 
-We design explainers and video ads to communicate company offerings &
+We design explainers and video ads to communicate company offerings &amp;
 features in 60 seconds.
 
 Sharing our Design capabilities.
-<https://www.youtube.com/watch?v=l1XYXE-Ckag>
 
 Video production costs $ 800 to $ 1500
 
 Can we chat and discuss more?
 
 Be Awesome
-Jai || Director & Producer
+Jai || Director &amp; Producer
 Advids | 3000+ Businesses trust Advids for video content
 
 P.S. If you don't want to hear from me again, please let me know.
