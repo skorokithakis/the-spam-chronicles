@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir public
+
+echo "You need to wait." > public/index.html
