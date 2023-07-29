@@ -1,0 +1,25 @@
+{% extends "email_base.html" %}
+
+{% block message_list %}
+{% set psection = get_section(path=section.ancestors|last) %}
+
+{% for thread in psection.subsections|sort %}
+{% set section = get_section(path=thread) %}
+<a href="{{ section.path }}">
+    <li class="message-preview">{{ section.title }}</li>
+</a>
+{% endfor %}
+{% endblock %}
+
+{% block messages %}
+<h2>{{ section.title }}</h2>
+<div class="email-thread">
+    {% for page in section.pages|sort(attribute="date") %}
+    <div class="single-email">
+        <p class="email-header email-sender"><strong>From:</strong> {{ page.extra.from }}</p>
+        <p class="email-header email-date"><strong>Date:</strong> {{ page.date | date(format="%B %d, %Y") }}</p>
+        <p class="email-body">{{ page.content|safe }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

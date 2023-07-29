@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.email-client-app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 30%;
+    overflow-y: scroll;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.main-view {
+    width: 70%;
+    overflow-y: scroll;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+.message-preview {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.message-preview:hover {
+    background-color: #ddd;
+}
+
+.email-thread .single-email {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.email-header {
+    margin: 8px 0;
+}
+
+.email-sender,
+.email-date,
+.email-subject {
+    font-size: 14px;
+    color: #888;
+}
+
+.email-body {
+    margin-top: 15px;
+    font-size: 16px;
+}

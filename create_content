@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+import datetime
+import json
+import os
+import re
+import shutil
+from pathlib import Path
+from pprint import pprint as print
+
+
+def slugify(text):
+    text = re.sub(r"[\W_]+", "-", text.lower()).strip("-")
+    return text
+
+
+def write_file(filename: str, contents: str):
+    with open(filename, "w") as outfile:
+        outfile.write(contents)
+
+
+current_dir = Path(__file__).resolve().parent
+os.chdir(current_dir)
+
+content_directory = current_dir / "content"
+if content_directory.is_dir():
+    shutil.rmtree(content_directory)
+
+content_directory.mkdir(exist_ok=True)
+
+write_file(
+    "content/_index.md",
+    """+++
+title = "Main section"
++++
+Hello there
+""",
+)
+
+(current_dir / "content/emails").mkdir(parents=True)
+
+write_file(
+    "content/emails/_index.md",
+    """+++
+title = "Emails section"
+template = "emails.html"
+sort_by = "title"
++++
+""",
+)
+
+with open("threads.json") as f:
+    for line in f:
+        thread = json.loads(line)
+        subject = thread["messages"][0]["subject"]
+        date = datetime.datetime.strptime(
+            thread["messages"][0]["date"], "%Y-%m-%dT%H:%M:%S%z"
+        )
+
+        dir = (
+            content_directory
+            / "emails"
+            / f"{slugify(subject)}-{date.strftime('%Y-%m-%d')}"
+        )
+        dir.mkdir(parents=True)
+        write_file(
+            dir / "_index.md",
+            f"""+++
+title = "{subject}"
+template = "thread.html"
++++
+""",
+        )
+        for counter, message in enumerate(thread["messages"], start=1):
+            message["date"] = datetime.datetime.strptime(
+                message["date"], "%Y-%m-%dT%H:%M:%S%z"
+            )
+            message["body"] = message["body"].replace("\r\n", "\n")
+            write_file(
+                dir / f"message{counter}.md",
+                f"""+++
+date = {message["date"].strftime("%Y-%m-%dT%H:%M:%SZ")}
+
+[extra]
+from = "{message["sender"]}"
++++
+
+{message["body"]}
+""",
+            )

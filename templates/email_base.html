@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="email-client-app">
+    <div class="sidebar">
+        <h2>Messages</h2>
+        <ul class="message-list">
+            {% block message_list %}
+            {% endblock %}
+        </ul>
+    </div>
+
+    <div class="main-view">
+        {% block messages %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
