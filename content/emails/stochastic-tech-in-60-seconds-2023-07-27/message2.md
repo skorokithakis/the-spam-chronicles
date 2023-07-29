@@ -2,7 +2,7 @@
 date = 2023-07-29T15:37:55Z
 
 [extra]
-from = "Me"
+from = "ChatGPT"
 +++
 
 Hi Jai,
