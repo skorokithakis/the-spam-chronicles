@@ -3,4 +3,5 @@
 ./create_content
 
 git add .
+git diff --cached
 git commit -a -m "Update content"
