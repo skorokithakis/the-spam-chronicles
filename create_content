@@ -5,7 +5,6 @@ import os
 import re
 import shutil
 from pathlib import Path
-from pprint import pprint as print
 
 
 def slugify(text):
@@ -18,6 +17,7 @@ def write_file(filename: str, contents: str):
         outfile.write(contents)
 
 
+print("Starting...")
 current_dir = Path(__file__).resolve().parent
 os.chdir(current_dir)
 
@@ -55,6 +55,8 @@ with open("threads.json") as f:
         date = datetime.datetime.strptime(
             thread["messages"][0]["date"], "%Y-%m-%dT%H:%M:%S%z"
         )
+        # Convert the date to UTC.
+        date = date.astimezone(datetime.timezone.utc)
 
         dir = (
             content_directory
@@ -73,10 +75,12 @@ template = "thread.html"
         for counter, message in enumerate(thread["messages"], start=1):
             message["date"] = datetime.datetime.strptime(
                 message["date"], "%Y-%m-%dT%H:%M:%S%z"
-            )
+            ).astimezone(datetime.timezone.utc)
             message["body"] = message["body"].replace("\r\n", "\n")
+            filename = dir / f"message{counter}.md"
+            print(f"Writing {filename.relative_to(current_dir)}...")
             write_file(
-                dir / f"message{counter}.md",
+                filename,
                 f"""+++
 date = {message["date"].strftime("%Y-%m-%dT%H:%M:%SZ")}
 
@@ -87,3 +91,5 @@ from = "{message["sender"]}"
 {message["body"]}
 """,
             )
+
+print("Done.")
