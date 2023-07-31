@@ -1,5 +1,5 @@
 title="The Spam Chronicles"
-description="The messages of all the people who sent me spam and had ChatGPT reply to them."
+description="A few people sent me spam. One day of programming later, and unbeknownst to them, they're having conversations with ChatGPT. These are their stories."
 
 # The URL the site will be built for
 base_url = "https://thespamchronicles.stavros.io"
