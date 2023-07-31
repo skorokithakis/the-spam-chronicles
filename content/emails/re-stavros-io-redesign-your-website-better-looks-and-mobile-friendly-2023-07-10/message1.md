@@ -5,7 +5,7 @@ date = 2023-07-10T07:13:26Z
 from = "Spammer"
 +++
 
-Dear *stavros.io * Owner,
+Dear *stavros.io <http://stavros.io>* Owner,
 
 Hope you are doing well !
 
@@ -27,11 +27,11 @@ and many other platforms and shopping carts.
 Etc……..
 
 *Let me know if you're interested redesigning/redevelopment of your website
-or new development of website &amp; looking forward to any of these above
-services, so I can provide you more information &amp; full proposal with best
+or new development of website & looking forward to any of these above
+services, so I can provide you more information & full proposal with best
 cost as per your requirement.*
 
-*I'd be happy to send some of our created Website samples &amp; price list if
+*I'd be happy to send some of our created Website samples & price list if
 you'd like to assess our work.*
 
 I’m waiting for your positive reply.
@@ -43,5 +43,6 @@ Best Regards,
 Note: If you are not interested, please
 
 Click here to *unsubscribe*
+<https://globalgns-dot-yamm-track.appspot.com/24fhOU3VHthvVcPx9FQEH6fp9KD2SJ4HOVCCjgm37YUNRaSZAiQEu8TNt-tAAIuUwU-wCgJL9WqW0AsaDIhDUeyDfn8HWAp5BpuBaelO9oiM8M9TaToTfvgu5C0QEXSU8lgPw4JCglVmdRmArMfpvWIFo1ad2f0aHKAsqgi-wZyUq7HCEmKcxoGwhwJuQDF0t_hLyG08>
 
 [image: beacon]
