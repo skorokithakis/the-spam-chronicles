@@ -19,7 +19,6 @@ Thank you for your time, and I look forward to hearing from you soon.
 
 Kind regards
 
-
 Hailey Alexander
 Business Development Manager
 hailey@techadsology.com

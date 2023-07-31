@@ -26,7 +26,6 @@ and vice versa. Additionally, the pricing varies based on applied filters,
 records availability, niche industry verticals, and the number of unique
 accounts/companies in the list. 
 
-
 Pricing Bracket (unlimited use) - Ballpark figure
 >2,000 contacts @ $499 at 0.25c per record
 >4,000 contacts @ $720 at 0.18c per record
@@ -43,23 +42,16 @@ Upon confirmation, I can get back with a quote and the terms for review.
 
  
 
-
-
-
 Joe Scriven
 
-
 Business Development
-
 
 Nexus Goals
 Ph: (510) 470-7017
 
-
    <mailto:joe@nexusgoals.com> joe@nexusgoals.com
    <http://www.nexusgoals.com/> www.nexusgoals.com
 San Jose . CA
-
 
 The content of this email is confidential and intended for the recipient
 specified in message only. It is strictly forbidden to share any part of
@@ -67,58 +59,3 @@ this message with any third party, without a written consent of the sender.
 If you received this message by mistake, please reply to this message and
 follow with its deletion, so that we can ensure such a mistake does not
 occur in the future (15).
-
- 
-
------Original Message-----
-
-From:  <mailto:support@historio.us> support@historio.us <
-<mailto:support@historio.us> support@historio.us> 
-
-Sent: Saturday, July 29, 2023 9:32 PM
-
-To: Susan Ramos 
-
-Subject: RE: AddThis Users
-
- 
-
-Hi Susan,
-
- 
-
-Thank you for reaching out to me. I apologize for the delay in my response.
-I indeed received your previous email and I appreciate your follow-up.
-
- 
-
-The prospect of obtaining the users list of "AddThis Users" is quite
-intriguing. As the founder of Stochastic Technologies, I am always
-interested in exploring new opportunities for collaboration and growth.
-Having access to a comprehensive data set, including company names, contact
-names, email addresses, and phone numbers, could potentially open up various
-possibilities for expanding our network and establishing valuable
-connections.
-
- 
-
-I would be delighted to review a sample file of the users list. It would
-allow me to better understand the quality and relevance of the data you are
-offering. Truly, I believe there might be great potential in this endeavor.
-Kindly provide me with the sample file, and I will examine it thoroughly.
-
- 
-
-Once again, I appreciate your persistence in reaching out to me. Rest
-assured, I am genuinely interested and eager to explore this opportunity
-further.
-
- 
-
-Best regards,
-
- 
-
-Stavros
-
-Founder, Stochastic Technologies

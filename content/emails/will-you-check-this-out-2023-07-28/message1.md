@@ -27,7 +27,6 @@ Thank you in advance for your consideration.
 Best regards,
 Lauren McGee of getyourselfpaid.com
 
-
 P.S. If you are not interested in receiving emails from me, simply
 reply and let me know. If you are interested or want to discuss this
 further, please don't hesitate to reach out to me.

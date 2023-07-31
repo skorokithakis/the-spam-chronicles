@@ -13,7 +13,6 @@ I hope this email finds you well.
 
 I am replying to you on behalf of one of my colleagues David.
 
-
 *As per my review of your website:-*Per my concern, your website is not
 looking good in today's market—very Old Design.
 As per the SEO, you have to create a multipage website.
@@ -27,7 +26,6 @@ Also, I will do your website SEO.
 I'd like to know the challenges you're facing in your initiatives.
 Understanding these challenges will help us explore how our solutions can
 effectively address them.
-
 
 Kindly check the link what is our process:-
 https://www.polosoftech.com/digital/digital-branding-company
@@ -67,7 +65,6 @@ Date: Sun, Jul 30, 2023 at 4:42 AM
 Subject: Re : stavros.io : Redesign your website better looks and be mobile
 friendly..
 To: David Jauny <jauny.david@globalgns.com>
-
 
 Hi David,
 
