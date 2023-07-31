@@ -61,7 +61,7 @@ with open("threads.json") as f:
         dir = (
             content_directory
             / "emails"
-            / f"{slugify(subject)}-{date.strftime('%Y-%m-%d')}"
+            / f"{date.strftime('%Y-%m-%d')}-{slugify(subject)}"
         )
         dir.mkdir(parents=True)
         write_file(
@@ -69,7 +69,6 @@ with open("threads.json") as f:
             f"""+++
 title = "{subject}"
 template = "thread.html"
-date = {date.strftime("%Y-%m-%dT%H:%M:%SZ")}
 +++
 """,
         )

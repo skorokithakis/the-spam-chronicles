@@ -1,7 +1,7 @@
 {% extends "email_base.html" %}
 
 {% block message_list %}
-{% for thread in section.subsections %}
+{% for thread in section.subsections|sort|reverse %}
 {% set section = get_section(path=thread) %}
 <a href="{{ section.path }}">
     <li class="message-preview">{{ section.title }}</li>

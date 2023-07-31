@@ -3,7 +3,7 @@
 {% block message_list %}
 {% set psection = get_section(path=section.ancestors|last) %}
 
-{% for thread in psection.subsections|sort %}
+{% for thread in psection.subsections|sort|reverse %}
 {% set csection = get_section(path=thread) %}
 <a href="{{ csection.path }}">
     <li class="message-preview{% if csection.path == section.path %} currently-selected{% endif %}">
