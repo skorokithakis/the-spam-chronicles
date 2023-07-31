@@ -1,5 +1,5 @@
 +++
 title = "Emails section"
 template = "emails.html"
-sort_by = "title"
+sort_by = "date"
 +++

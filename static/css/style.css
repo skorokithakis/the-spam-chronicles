@@ -32,6 +32,11 @@ body {
     color: #333;
 }
 
+.message-preview.currently-selected {
+    font-weight: bold;
+    background-color: #ddd;
+}
+
 .message-preview {
     padding: 10px;
     border-bottom: 1px solid #ddd;

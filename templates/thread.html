@@ -4,9 +4,11 @@
 {% set psection = get_section(path=section.ancestors|last) %}
 
 {% for thread in psection.subsections|sort %}
-{% set section = get_section(path=thread) %}
-<a href="{{ section.path }}">
-    <li class="message-preview">{{ section.title }}</li>
+{% set csection = get_section(path=thread) %}
+<a href="{{ csection.path }}">
+    <li class="message-preview{% if csection.path == section.path %} currently-selected{% endif %}">
+    {{ csection.title }}
+    </li>
 </a>
 {% endfor %}
 {% endblock %}

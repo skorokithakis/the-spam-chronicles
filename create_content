@@ -69,6 +69,7 @@ with open("threads.json") as f:
             f"""+++
 title = "{subject}"
 template = "thread.html"
+date = {date.strftime("%Y-%m-%dT%H:%M:%SZ")}
 +++
 """,
         )
