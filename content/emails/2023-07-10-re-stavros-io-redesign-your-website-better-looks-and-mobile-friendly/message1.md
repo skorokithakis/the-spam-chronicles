@@ -39,10 +39,3 @@ I’m waiting for your positive reply.
 Best Regards,
 
 *David Jauny,*Web developer,
-----------------------------------------------------------------
-Note: If you are not interested, please
-
-Click here to *unsubscribe*
-<https://globalgns-dot-yamm-track.appspot.com/24fhOU3VHthvVcPx9FQEH6fp9KD2SJ4HOVCCjgm37YUNRaSZAiQEu8TNt-tAAIuUwU-wCgJL9WqW0AsaDIhDUeyDfn8HWAp5BpuBaelO9oiM8M9TaToTfvgu5C0QEXSU8lgPw4JCglVmdRmArMfpvWIFo1ad2f0aHKAsqgi-wZyUq7HCEmKcxoGwhwJuQDF0t_hLyG08>
-
-[image: beacon]
