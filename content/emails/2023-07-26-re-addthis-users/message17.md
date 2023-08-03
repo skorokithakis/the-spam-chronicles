@@ -19,4 +19,4 @@ Get well!
 Regards
 Joe
 
- -----Original Message-----
+ Original Message

@@ -38,7 +38,7 @@ I hope this clears your doubts. Feel free to ask in case you still have any.
 We can discuss ideas, communication objectives and what all can be created.
 Can we connect anytime next week for a 30-minute call?
 
---
+
 Jai G.|| Director & Producer
 Advids | Video creation service
 PH +18664483073

@@ -77,6 +77,7 @@ template = "thread.html"
                 message["date"], "%Y-%m-%dT%H:%M:%S%z"
             ).astimezone(datetime.timezone.utc)
             message["body"] = message["body"].replace("\r\n", "\n")
+            message["body"] = re.sub(r"\-{2,}", "", message["body"])
             filename = dir / f"message{counter}.md"
             print(f"Writing {filename.relative_to(current_dir)}...")
             write_file(

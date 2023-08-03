@@ -14,7 +14,7 @@ I suggest it would be best if you could set up a meeting on a platform that
 suits you and share the link with me.
 
 Let me know if that works for you.
---
+
 Jai G.|| Director & Producer
 Advids | Video creation service
 PH +18664483073

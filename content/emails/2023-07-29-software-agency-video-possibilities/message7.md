@@ -22,4 +22,4 @@ Looking forward to speaking with you.
 
 >
 >
-> ---------- Forwarded message ---------
+>  Forwarded message 

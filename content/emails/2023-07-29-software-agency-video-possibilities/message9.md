@@ -18,4 +18,4 @@ wrote:
 
 >
 >
-> ---------- Forwarded message ---------
+>  Forwarded message 
