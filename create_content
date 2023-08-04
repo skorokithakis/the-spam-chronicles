@@ -21,29 +21,19 @@ print("Starting...")
 current_dir = Path(__file__).resolve().parent
 os.chdir(current_dir)
 
-content_directory = current_dir / "content"
-if content_directory.is_dir():
-    shutil.rmtree(content_directory)
+emails_directory = current_dir / "content" / "emails"
+if emails_directory.is_dir():
+    shutil.rmtree(emails_directory)
 
-content_directory.mkdir(exist_ok=True)
-
-write_file(
-    "content/_index.md",
-    """+++
-title = "Main section"
-+++
-Hello there
-""",
-)
-
-(current_dir / "content/emails").mkdir(parents=True)
+emails_directory.mkdir(exist_ok=True, parents=True)
 
 write_file(
     "content/emails/_index.md",
     """+++
-title = "Emails section"
+title = "The conversations"
 template = "emails.html"
 sort_by = "title"
+weight = 99
 +++
 """,
 )
@@ -58,14 +48,12 @@ with open("threads.json") as f:
         # Convert the date to UTC.
         date = date.astimezone(datetime.timezone.utc)
 
-        dir = (
-            content_directory
-            / "emails"
-            / f"{date.strftime('%Y-%m-%d')}-{slugify(subject)}"
+        thread_dir = (
+            emails_directory / f"{date.strftime('%Y-%m-%d')}-{slugify(subject)}"
         )
-        dir.mkdir(parents=True)
+        thread_dir.mkdir(parents=True)
         write_file(
-            dir / "_index.md",
+            thread_dir / "_index.md",
             f"""+++
 title = "{subject}"
 template = "thread.html"
@@ -78,7 +66,7 @@ template = "thread.html"
             ).astimezone(datetime.timezone.utc)
             message["body"] = message["body"].replace("\r\n", "\n")
             message["body"] = re.sub(r"\-{2,}", "", message["body"])
-            filename = dir / f"message{counter}.md"
+            filename = thread_dir / f"message{counter}.md"
             print(f"Writing {filename.relative_to(current_dir)}...")
             write_file(
                 filename,
