@@ -34,43 +34,51 @@ title = "The conversations"
 template = "emails.html"
 sort_by = "title"
 weight = 99
+redirect_to = "/emails/landing/"
 +++
 """,
 )
 
+threads = []
 with open("threads.json") as f:
     for line in f:
-        thread = json.loads(line)
-        subject = thread["messages"][0]["subject"]
-        date = datetime.datetime.strptime(
+        threads.append(json.loads(line))
+    threads.sort(
+        key=lambda thread: datetime.datetime.strptime(
             thread["messages"][0]["date"], "%Y-%m-%dT%H:%M:%S%z"
         )
-        # Convert the date to UTC.
-        date = date.astimezone(datetime.timezone.utc)
+    )
 
-        thread_dir = (
-            emails_directory / f"{date.strftime('%Y-%m-%d')}-{slugify(subject)}"
-        )
-        thread_dir.mkdir(parents=True)
-        write_file(
-            thread_dir / "_index.md",
-            f"""+++
+for thread_counter, thread in enumerate(threads):
+    subject = thread["messages"][0]["subject"]
+    date = datetime.datetime.strptime(
+        thread["messages"][0]["date"], "%Y-%m-%dT%H:%M:%S%z"
+    )
+    # Convert the date to UTC.
+    date = date.astimezone(datetime.timezone.utc)
+
+    thread_dir = emails_directory / f"{date.strftime('%Y-%m-%d')}-{slugify(subject)}"
+    thread_dir.mkdir(parents=True)
+    write_file(
+        thread_dir / "_index.md",
+        f"""+++
 title = "{subject}"
 template = "thread.html"
+aliases = [{'"/emails/landing/"' if thread_counter == len(threads) - 1 else ""}]
 +++
 """,
-        )
-        for counter, message in enumerate(thread["messages"], start=1):
-            message["date"] = datetime.datetime.strptime(
-                message["date"], "%Y-%m-%dT%H:%M:%S%z"
-            ).astimezone(datetime.timezone.utc)
-            message["body"] = message["body"].replace("\r\n", "\n")
-            message["body"] = re.sub(r"\-{2,}", "", message["body"])
-            filename = thread_dir / f"message{counter}.md"
-            print(f"Writing {filename.relative_to(current_dir)}...")
-            write_file(
-                filename,
-                f"""+++
+    )
+    for counter, message in enumerate(thread["messages"], start=1):
+        message["date"] = datetime.datetime.strptime(
+            message["date"], "%Y-%m-%dT%H:%M:%S%z"
+        ).astimezone(datetime.timezone.utc)
+        message["body"] = message["body"].replace("\r\n", "\n")
+        message["body"] = re.sub(r"\-{2,}", "", message["body"])
+        filename = thread_dir / f"message{counter}.md"
+        print(f"Writing {filename.relative_to(current_dir)}...")
+        write_file(
+            str(filename),
+            f"""+++
 date = {message["date"].strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 [extra]
@@ -79,6 +87,6 @@ from = "{message["sender"]}"
 
 {message["body"]}
 """,
-            )
+        )
 
 print("Done.")
