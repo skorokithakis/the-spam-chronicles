@@ -19,7 +19,7 @@
     {% for page in section.pages|sort(attribute="date") %}
     <div class="single-email">
         <p class="email-header email-sender"><strong>From:</strong> {{ page.extra.from }}</p>
-        <p class="email-header email-date"><strong>Date:</strong> {{ page.date | date(format="%B %d, %Y") }}</p>
+        <p class="email-header email-date"><strong>Date:</strong> {{ page.date | date(format="%B %d, %Y %H:%M") }}</p>
         <p class="email-body">{{ page.content|safe }}</p>
     </div>
     {% endfor %}
