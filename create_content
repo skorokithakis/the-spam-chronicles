@@ -62,7 +62,7 @@ for thread_counter, thread in enumerate(threads):
     write_file(
         thread_dir / "_index.md",
         f"""+++
-title = "{subject}"
+title = "{subject} <em>({len(thread["messages"])})</em>"
 template = "thread.html"
 aliases = [{'"/emails/landing/"' if thread_counter == len(threads) - 1 else ""}]
 +++

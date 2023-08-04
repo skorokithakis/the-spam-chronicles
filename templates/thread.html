@@ -7,14 +7,14 @@
 {% set csection = get_section(path=thread) %}
 <a href="{{ csection.path }}">
     <li class="message-preview{% if csection.path == section.path %} currently-selected{% endif %}">
-    {{ csection.title }}
+    {{ csection.title|safe }}
     </li>
 </a>
 {% endfor %}
 {% endblock %}
 
 {% block messages %}
-<h2>{{ section.title }}</h2>
+<h2>{{ section.title|safe }}</h2>
 <div class="email-thread">
     {% for page in section.pages|sort(attribute="date") %}
     <div class="single-email">

@@ -1,5 +1,5 @@
 +++
-title = "re: Stavros. Thoughts? <em>(6)</em>"
+title = "Re: # Follow up..? <em>(2)</em>"
 template = "thread.html"
 aliases = []
 +++
