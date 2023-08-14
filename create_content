@@ -50,6 +50,9 @@ with open("threads.json") as f:
     )
 
 for thread_counter, thread in enumerate(threads):
+    if len(thread["messages"]) <= 2:
+        print("Thread has too few messages, skipping...")
+        continue
     subject = thread["messages"][0]["subject"]
     date = datetime.datetime.strptime(
         thread["messages"][0]["date"], "%Y-%m-%dT%H:%M:%S%z"
