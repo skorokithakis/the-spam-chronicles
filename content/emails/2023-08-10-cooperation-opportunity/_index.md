@@ -1,5 +1,5 @@
 +++
-title = "Cooperation opportunity <em>(12)</em>"
+title = "Cooperation opportunity <em>(20)</em>"
 template = "thread.html"
-aliases = ["/emails/landing/"]
+aliases = []
 +++
