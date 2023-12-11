@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eoux pipefail
+
 ./create_content
 
 ./build # Just to test.
