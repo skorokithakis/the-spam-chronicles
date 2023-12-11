@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eoux pipefail
+set -eox pipefail
 
 ./create_content
 
